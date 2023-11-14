@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "bob_run_right_5.png",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
