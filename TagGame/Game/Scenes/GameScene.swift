@@ -21,15 +21,15 @@ final class GameScene: SKScene {
     }
     
     private func setupInputManager() {
-        guard let localPlayer = players.first else { return }
+        guard let localPlayer = players.randomElement() else { return }
         inputManager = InputManager(player: localPlayer)
     }
     
     private func setupEntities() {
-        let player1 = PlayerEntity(id: "1", name: "Xio", role: .catcher, skin: .amelia, position: .zero)
-        let player2 = PlayerEntity(id: "2", name: "Geovana", role: .runner, skin: .adam, position: .init(x: 100, y: 100))
-        let player3 = PlayerEntity(id: "3", name: "Contine", role: .runner, skin: .bob, position: .init(x: 50, y: 50))
-        let player4 = PlayerEntity(id: "4", name: "123", role: .runner, skin: .alex, position: .init(x: -100, y: 0))
+        let player1 = PlayerEntity(id: "1", name: "Amelia", role: .catcher, skin: .amelia, position: .zero)
+        let player2 = PlayerEntity(id: "2", name: "Adam", role: .runner, skin: .adam, position: .init(x: 100, y: 100))
+        let player3 = PlayerEntity(id: "3", name: "Bob", role: .runner, skin: .bob, position: .init(x: 50, y: 50))
+        let player4 = PlayerEntity(id: "4", name: "Alex", role: .runner, skin: .alex, position: .init(x: -100, y: 0))
         
         entityManager?.addEntity(player1)
         entityManager?.addEntity(player2)

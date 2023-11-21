@@ -5,10 +5,10 @@ final class FreezeComponent: GKComponent {
     private(set) var isFrozen = false
     
     override func didAddToEntity() {
-        renderNode?.removeAllActions()
         isFrozen = true
         body?.isDynamic = false
         renderNode?.shader = Resources.loadShader(ofType: .freeze)
+        renderNode?.removeAllActions()
     }
     
     override func willRemoveFromEntity() {
