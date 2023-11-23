@@ -1,14 +1,9 @@
-//
-//  ContentView.swift
-//  TagGame
-//
-//  Created by Geovana Contine on 13/11/23.
-//
-
 import SwiftUI
 import SpriteKit
 
 struct ContentView: View {
+    
+    @StateObject var manager = GameCenterManager()
     
     private var gameScene: SKScene {
         let scene = SKScene(fileNamed: "GameScene")!
@@ -21,7 +16,27 @@ struct ContentView: View {
     }
     
     var body: some View {
-        SpriteView(scene: gameScene, debugOptions: debugOptions)
+        ZStack {
+            if !manager.isAuthenticated {
+                Text("Not authenticated")
+                    .task { manager.authenticateUser() }
+            }
+            
+            if manager.isAuthenticated {
+                Button("Open Matchmaking") {
+                    manager.showMatchmaker()
+                }
+            }
+            
+            if manager.isShowingMatchmaker {
+                MatchmakerView(delegate: manager, request: manager.request)
+                    .ignoresSafeArea()
+            }
+            
+            if manager.isMatchReady {
+                SpriteView(scene: gameScene, debugOptions: debugOptions)
+            }
+        }
     }
 }
 

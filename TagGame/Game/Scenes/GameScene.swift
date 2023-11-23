@@ -54,7 +54,7 @@ extension GameScene: SKPhysicsContactDelegate {
 // MARK: - Input
 
 extension GameScene {
-    override func keyDown(with event: NSEvent) {
-        inputManager?.keyDown(with: event)
-    }
+//    override func keyDown(with event: NSEvent) {
+//        inputManager?.keyDown(with: event)
+//    }
 }

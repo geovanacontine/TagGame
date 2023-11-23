@@ -1,6 +1,6 @@
 import SpriteKit
 
-enum KeyboardKey: uint16 {
+enum KeyboardKey: Int {
     case a = 0
     case d = 2
     case s = 1
@@ -12,14 +12,14 @@ enum KeyboardKey: uint16 {
 }
 
 struct KeyboardInput {
-    func keyDown(with event: NSEvent) -> Orientation? {
-        switch KeyboardKey(rawValue: event.keyCode) {
-        case .a, .arrowLeft: return .left
-        case .d, .arrowRight: return .right
-        case .s, .arrowDown: return .down
-        case .w, .arrowUp: return .up
-        default:
-            return nil
-        }
-    }
+//    func keyDown(with event: NSEvent) -> Orientation? {
+//        switch KeyboardKey(rawValue: event.keyCode) {
+//        case .a, .arrowLeft: return .left
+//        case .d, .arrowRight: return .right
+//        case .s, .arrowDown: return .down
+//        case .w, .arrowUp: return .up
+//        default:
+//            return nil
+//        }
+//    }
 }

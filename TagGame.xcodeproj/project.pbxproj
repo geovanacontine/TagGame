@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 60;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -35,6 +35,8 @@
 		01370AA92B03E603005B34E2 /* FreezeComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01370AA82B03E603005B34E2 /* FreezeComponent.swift */; };
 		01370AAD2B03EB2C005B34E2 /* FreezeShader.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 01370AAC2B03EB2C005B34E2 /* FreezeShader.fsh */; };
 		01370AAF2B03ED33005B34E2 /* ShaderType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01370AAE2B03ED33005B34E2 /* ShaderType.swift */; };
+		018782D72B0E243700657831 /* GameCenterManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 018782D52B0E243700657831 /* GameCenterManager.swift */; };
+		018782D82B0E243700657831 /* MatchmakerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 018782D62B0E243700657831 /* MatchmakerView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,7 +45,6 @@
 		01370A682B028916005B34E2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		01370A6A2B028917005B34E2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		01370A6D2B028917005B34E2 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		01370A6F2B028917005B34E2 /* TagGame.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TagGame.entitlements; sourceTree = "<group>"; };
 		01370A772B0289DF005B34E2 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
 		01370A792B028A37005B34E2 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
 		01370A7B2B028E04005B34E2 /* Resources.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Resources.xcassets; sourceTree = "<group>"; };
@@ -68,6 +69,8 @@
 		01370AA82B03E603005B34E2 /* FreezeComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FreezeComponent.swift; sourceTree = "<group>"; };
 		01370AAC2B03EB2C005B34E2 /* FreezeShader.fsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = FreezeShader.fsh; sourceTree = "<group>"; };
 		01370AAE2B03ED33005B34E2 /* ShaderType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShaderType.swift; sourceTree = "<group>"; };
+		018782D52B0E243700657831 /* GameCenterManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameCenterManager.swift; sourceTree = "<group>"; };
+		018782D62B0E243700657831 /* MatchmakerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatchmakerView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,7 +123,6 @@
 				01370A662B028916005B34E2 /* TagGameApp.swift */,
 				01370A682B028916005B34E2 /* ContentView.swift */,
 				01370A6A2B028917005B34E2 /* Assets.xcassets */,
-				01370A6F2B028917005B34E2 /* TagGame.entitlements */,
 				01370A6C2B028917005B34E2 /* Preview Content */,
 			);
 			path = App;
@@ -129,6 +131,7 @@
 		01370A762B0289BE005B34E2 /* Game */ = {
 			isa = PBXGroup;
 			children = (
+				018782D42B0E242700657831 /* Multiplayer */,
 				01370A7F2B02910B005B34E2 /* Entities */,
 				01370A802B02910F005B34E2 /* Components */,
 				01370A812B029119005B34E2 /* Systems */,
@@ -213,6 +216,15 @@
 			path = Input;
 			sourceTree = "<group>";
 		};
+		018782D42B0E242700657831 /* Multiplayer */ = {
+			isa = PBXGroup;
+			children = (
+				018782D52B0E243700657831 /* GameCenterManager.swift */,
+				018782D62B0E243700657831 /* MatchmakerView.swift */,
+			);
+			path = Multiplayer;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -249,7 +261,7 @@
 				};
 			};
 			buildConfigurationList = 01370A5E2B028916005B34E2 /* Build configuration list for PBXProject "TagGame" */;
-			compatibilityVersion = "Xcode 14.0";
+			compatibilityVersion = "Xcode 15.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -290,10 +302,12 @@
 				01370A8C2B02A091005B34E2 /* Orientation.swift in Sources */,
 				01370A9D2B03B24C005B34E2 /* PhysicsCategory.swift in Sources */,
 				01370A7A2B028A37005B34E2 /* GameScene.swift in Sources */,
+				018782D82B0E243700657831 /* MatchmakerView.swift in Sources */,
 				01370A852B02918E005B34E2 /* RenderComponent.swift in Sources */,
 				01370A872B029354005B34E2 /* EntityManager.swift in Sources */,
 				01370A692B028916005B34E2 /* ContentView.swift in Sources */,
 				01370A672B028916005B34E2 /* TagGameApp.swift in Sources */,
+				018782D72B0E243700657831 /* GameCenterManager.swift in Sources */,
 				01370A962B02B037005B34E2 /* AnimationComponent.swift in Sources */,
 				01370AA32B03DDAC005B34E2 /* RoleComponent.swift in Sources */,
 				01370A9B2B03A25F005B34E2 /* PhysicsComponent.swift in Sources */,
@@ -372,7 +386,7 @@
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = macosx;
+				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -428,7 +442,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
-				SDKROOT = macosx;
+				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 			};
 			name = Release;
@@ -447,17 +461,23 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.action-games";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 13.0;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = br.org.bonilhacontine.TagGame;
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.bonilhacontine.TagGame;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -475,17 +495,23 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.action-games";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 13.0;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = br.org.bonilhacontine.TagGame;
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.bonilhacontine.TagGame;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
